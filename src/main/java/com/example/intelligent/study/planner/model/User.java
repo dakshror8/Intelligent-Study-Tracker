@@ -1,4 +1,4 @@
-package com.example.intelligent.study.planner.entity;
+package com.example.intelligent.study.planner.model;
 
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;

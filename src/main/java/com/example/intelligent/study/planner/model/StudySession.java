@@ -1,6 +1,5 @@
-package com.example.intelligent.study.planner.entity;
+package com.example.intelligent.study.planner.model;
 
-import com.example.intelligent.study.planner.utils.Difficulty;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

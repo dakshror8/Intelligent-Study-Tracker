@@ -1,5 +1,7 @@
-package com.example.intelligent.study.planner.utils;
+package com.example.intelligent.study.planner.utils.request;
 
+
+import com.example.intelligent.study.planner.model.Difficulty;
 
 public class StudySessionRequest {
     public Long userId;

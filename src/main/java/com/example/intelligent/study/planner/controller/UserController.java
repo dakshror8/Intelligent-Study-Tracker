@@ -1,9 +1,9 @@
 package com.example.intelligent.study.planner.controller;
 
-import com.example.intelligent.study.planner.entity.User;
-import com.example.intelligent.study.planner.exceptionHandling.ResourceAlreadyExistException;
-import com.example.intelligent.study.planner.exceptionHandling.ResourceNotFoundException;
-import com.example.intelligent.study.planner.exceptionHandling.UserEmailExistException;
+import com.example.intelligent.study.planner.model.User;
+import com.example.intelligent.study.planner.exception.ResourceAlreadyExistException;
+import com.example.intelligent.study.planner.exception.ResourceNotFoundException;
+import com.example.intelligent.study.planner.exception.UserEmailExistException;
 import com.example.intelligent.study.planner.service.UserService;
 import org.springframework.web.bind.annotation.*;
 

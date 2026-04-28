@@ -1,6 +1,6 @@
 package com.example.intelligent.study.planner.config;
 
-import com.example.intelligent.study.planner.entity.User;
+import com.example.intelligent.study.planner.model.User;
 import com.example.intelligent.study.planner.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

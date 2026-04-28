@@ -1,6 +1,6 @@
 package com.example.intelligent.study.planner.controller;
 
-import com.example.intelligent.study.planner.exceptionHandling.ResourceNotFoundException;
+import com.example.intelligent.study.planner.exception.ResourceNotFoundException;
 import com.example.intelligent.study.planner.service.TopicProgressService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

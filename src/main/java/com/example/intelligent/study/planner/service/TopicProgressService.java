@@ -1,13 +1,14 @@
 package com.example.intelligent.study.planner.service;
 
-import com.example.intelligent.study.planner.entity.TopicProgress;
-import com.example.intelligent.study.planner.exceptionHandling.ResourceNotFoundException;
+import com.example.intelligent.study.planner.model.TopicProgress;
+import com.example.intelligent.study.planner.exception.ResourceNotFoundException;
 import com.example.intelligent.study.planner.repository.TopicProgressRepository;
-import org.jspecify.annotations.Nullable;
+import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
 
+@Service
 public class TopicProgressService {
 
     private final TopicProgressRepository progressRepository;

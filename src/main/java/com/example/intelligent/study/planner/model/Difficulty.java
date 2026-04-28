@@ -1,4 +1,4 @@
-package com.example.intelligent.study.planner.utils;
+package com.example.intelligent.study.planner.model;
 
 public enum Difficulty
 {

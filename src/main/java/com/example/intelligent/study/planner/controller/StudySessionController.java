@@ -1,7 +1,7 @@
 package com.example.intelligent.study.planner.controller;
 
 import com.example.intelligent.study.planner.service.StudySessionService;
-import com.example.intelligent.study.planner.utils.StudySessionRequest;
+import com.example.intelligent.study.planner.utils.request.StudySessionRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,7 +27,7 @@ public class StudySessionController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getSessions(@PathVariable Long userID){
-        return ResponseEntity.ok(getSessionsByUser(userId));
+    public ResponseEntity<?> getSessions(@PathVariable Long userId){
+        return ResponseEntity.ok(studySessionService.getSessionsByUser(userId));
     }
 }

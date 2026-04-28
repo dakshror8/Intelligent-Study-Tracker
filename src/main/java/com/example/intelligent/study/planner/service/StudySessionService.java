@@ -1,11 +1,11 @@
 package com.example.intelligent.study.planner.service;
 
-import com.example.intelligent.study.planner.entity.StudySession;
-import com.example.intelligent.study.planner.entity.TopicProgress;
+import com.example.intelligent.study.planner.model.StudySession;
+import com.example.intelligent.study.planner.model.TopicProgress;
 import com.example.intelligent.study.planner.repository.StudySessionRepository;
 import com.example.intelligent.study.planner.repository.TopicProgressRepository;
-import com.example.intelligent.study.planner.utils.Difficulty;
-import com.example.intelligent.study.planner.utils.StudySessionRequest;
+import com.example.intelligent.study.planner.model.Difficulty;
+import com.example.intelligent.study.planner.utils.request.StudySessionRequest;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -74,7 +74,7 @@ public class StudySessionService {
         };
     }
 
-    private List<StudySession> getSessionsByUser(Long userId){
+    public List<StudySession> getSessionsByUser(Long userId){
         return studySessionRepository.findByUserId(userId);
     }
 }
