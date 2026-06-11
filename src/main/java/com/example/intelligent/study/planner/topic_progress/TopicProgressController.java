@@ -27,7 +27,7 @@ public class TopicProgressController {
     @GetMapping("/{userId}/topics/{topicId}")
     public ResponseEntity<?> getTopic(
             @PathVariable Long userId,
-            @PathVariable Long topicId) throws ResourceNotFoundException {
+            @PathVariable Long topicId) {
 
         return ResponseEntity.ok(
                 service.getTopicProgress(userId, topicId)

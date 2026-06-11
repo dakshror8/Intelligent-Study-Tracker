@@ -38,6 +38,7 @@ public class StudySessionService {
         updateTopicProgress(request);
     }
 
+    @Transactional
     private void updateTopicProgress(StudySessionRequest request) {
 
         TopicProgress progress = progressRepository

@@ -1,8 +1,8 @@
 package com.example.intelligent.study.planner.exception;
 
-public class ResourceNotFoundException extends Exception{
-    private static final String message = "Resource Not Found";
-    public ResourceNotFoundException(){
+public class ResourceNotFoundException extends RuntimeException{
+
+    public ResourceNotFoundException(String message){
         super(message);
     }
 }

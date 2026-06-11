@@ -41,18 +41,18 @@ public class UserService implements UserDetailsService {
     }
 
 
-    public void deleteUser(Long userId) throws ResourceNotFoundException {
+    public void deleteUser(Long userId) {
         boolean exists = userRepository.existsById(userId);
         if(!exists){
-            throw new ResourceNotFoundException();
+            throw new ResourceNotFoundException("User not found with id: " + userId);
         }
         userRepository.deleteById(userId);
     }
 
     @Transactional
-    public void updateUser(Long userId, String email, String name) throws ResourceNotFoundException, ResourceAlreadyExistException, UserEmailExistException {
+    public void updateUser(Long userId, String email, String name) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException());
+                .orElseThrow(() -> new ResourceNotFoundException("user not found with id: " + userId));
 
         if(name != null && name.length() > 0 && !Objects.equals(user.getName(), name)){
             user.setName(name);

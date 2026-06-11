@@ -19,9 +19,9 @@ public class TopicProgressService {
         return progressRepository.findByUserId(userId);
     }
 
-    public TopicProgress getTopicProgress(Long userId, Long topicId) throws ResourceNotFoundException {
+    public TopicProgress getTopicProgress(Long userId, Long topicId) {
         return progressRepository.findByUserIdAndTopicId(userId, topicId)
-                .orElseThrow(() -> new ResourceNotFoundException());
+                .orElseThrow(() -> new ResourceNotFoundException("Topic Progress not found"));
     }
 
     // weakest topic => highest avd difficulty

@@ -23,12 +23,12 @@ public class UserController {
     }
 
     @PostMapping
-    public void registerNewUser(User user) throws UserEmailExistException {
+    public void registerNewUser(User user) {
         userService.addNewUser(user);
     }
 
     @DeleteMapping(path = "{userId}")
-    public void deleteUser(@PathVariable Long userId) throws ResourceNotFoundException {
+    public void deleteUser(@PathVariable Long userId) {
         userService.deleteUser(userId);
     }
 
